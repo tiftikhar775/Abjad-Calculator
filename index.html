@@ -8,6 +8,15 @@
     <script defer src="script.js"></script>
 </head>
 <body>
+    <h1>Abjad Calculator</h1>
+
+    <div class="instructions">
+        <p style="font-family: monospace;">
+            Using the arabic characters below, click on any letter or letters and then hit the calculate
+            button to generate the numerical abjad value for that series of characters. 
+        </p>
+    </div>
+
     <div class="table-container">
         <h2>Ordinal Positions</h2>
         <div id="ordinal">
@@ -54,7 +63,7 @@
             </table>
         </div>
 
-        <h2>Abjad Letters Calculator</h2>
+        <h2>Arabic Letters</h2>
         <div id="abjadCalc">
             <table>
                 <tr>
@@ -99,7 +108,7 @@
             </table>
         </div>
 
-        <h2>Numerical Values</h2>
+        <!--numerical values-->
         <div id="numValues">
             <table>
                 <tr>
@@ -145,9 +154,13 @@
         </div>
 
         <!-- Calculate button / textbox -->
-        <div>
+        <div id="calculate">
+            <label for="">Arabic Characters: </label> <input type="text" size="50" />
+            <br><br>
             <label for="abjadValue">Abjad Value:</label>
             <input type="text" id="abjadValue" name="abjadValue" size="50" />
+        
+            <br><br>
             <button type="button" id="calcBtn">Calculate</button>
             <button type="button" id="clearBtn">Clear</button>
         </div>
