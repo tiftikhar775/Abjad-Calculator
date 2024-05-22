@@ -5,149 +5,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abjad Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <div class="table-container">
-        <!-- Ordinal Positions Table -->
         <h2>Ordinal Positions</h2>
-        <table>
-            <tr>
-                <td></td> <!-- Gap -->
-                <td>26</td>
-                <td>23</td>
-                <td>20</td>
-                <td>17</td>
-                <td></td> <!-- Gap -->
-                <td>14</td>
-                <td>11</td>
-                <td>8</td>
-                <td>5</td>
-                <td></td> <!-- Gap -->
-            </tr>
-            <tr>
-                <td>1</td> 
-                <td>27</td>
-                <td>24</td> 
-                <td>21</td>
-                <td>18</td>
-                <td></td> <!-- Gap -->
-                <td>15</td>
-                <td>12</td>
-                <td>9</td>
-                <td>6</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <td>2</td> 
-                <td>28</td>
-                <td>25</td>
-                <td>22</td>
-                <td>19</td>
-                <td></td> <!-- Gap -->
-                <td>16</td>
-                <td>13</td>
-                <td>10</td>
-                <td>7</td>
-                <td>4</td>
-            </tr>
-        </table>
+        <div id="ordinal">
+            <table>
+                <tr>
+                    <td></td> <!-- Gap -->
+                    <td>26</td>
+                    <td>23</td>
+                    <td>20</td>
+                    <td>17</td>
+                    <td></td> <!-- Gap -->
+                    <td>14</td>
+                    <td>11</td>
+                    <td>8</td>
+                    <td>5</td>
+                    <td></td> <!-- Gap -->
+                </tr>
+                <tr>
+                    <td>1</td> 
+                    <td>27</td>
+                    <td>24</td> 
+                    <td>21</td>
+                    <td>18</td>
+                    <td></td> <!-- Gap -->
+                    <td>15</td>
+                    <td>12</td>
+                    <td>9</td>
+                    <td>6</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>2</td> 
+                    <td>28</td>
+                    <td>25</td>
+                    <td>22</td>
+                    <td>19</td>
+                    <td></td> <!-- Gap -->
+                    <td>16</td>
+                    <td>13</td>
+                    <td>10</td>
+                    <td>7</td>
+                    <td>4</td>
+                </tr>
+            </table>
+        </div>
 
-        <!-- Abjad Letters Calculator Table -->
         <h2>Abjad Letters Calculator</h2>
-        <table>
-            <tr>
-                <td></td> <!-- Gap -->
-                <td id="calcBtn"><button class="abjad-calc-button">ض</button></td>
-                <td id="calcBtn"><button class="abjad-calc-button">ث</button></td>
-                <td id="calcBtn"><button class="abjad-calc-button">ر</button></td>
-                <td id="calcBtn"><button class="abjad-calc-button">ف</button></td>
-                <td></td> <!-- Gap -->
-                <td id="calcBtn"><button class="abjad-calc-button">ن</button></td>
-                <td id="calcBtn"><button class="abjad-calc-button">ك</button></td>
-                <td id="calcBtn"><button class="abjad-calc-button">ح</button></td>
-                <td id="calcBtn"><button class="abjad-calc-button">٥</button></td>
-                <td></td> <!-- Gap -->
-            </tr>
-            <tr>
-                <td id="calcBtn"><button class="abjad-calc-button">أ</button></td> 
-                <td id="calcBtn"><button class="abjad-calc-button">ظ</button></td>
-                <td id="calcBtn"><button class="abjad-calc-button">خ</button></td> 
-                <td id="calcBtn"><button class="abjad-calc-button">ش</button></td>
-                <td id="calcBtn"><button class="abjad-calc-button">ص</button></td>
-                <td></td> <!-- Gap -->
-                <td id="calcBtn"><button class="abjad-calc-button">س</button></td>
-                <td id="calcBtn"><button class="abjad-calc-button">ل</button></td>
-                <td id="calcBtn"><button class="abjad-calc-button">ط</button></td>
-                <td id="calcBtn"><button class="abjad-calc-button">و</button></td>
-                <td id="calcBtn"><button class="abjad-calc-button">ج</button></td>
-            </tr>
-            <tr>
-                <td id="calcBtn"><button class="abjad-calc-button">ب</button></td>
-                <td id="calcBtn"><button class="abjad-calc-button">غ</button></td>
-                <td id="calcBtn"><button class="abjad-calc-button">ذ</button></td>
-                <td id="calcBtn"><button class="abjad-calc-button">ت</button></td>
-                <td id="calcBtn"><button class="abjad-calc-button">ق</button></td>
-                <td></td> <!-- Gap -->
-                <td id="calcBtn"><button class="abjad-calc-button">ع</button></td>
-                <td id="calcBtn"><button class="abjad-calc-button">م</button></td>
-                <td id="calcBtn"><button class="abjad-calc-button">ي</button></td>
-                <td id="calcBtn"><button class="abjad-calc-button">ز</button></td>
-                <td id="calcBtn"><button class="abjad-calc-button">د</button></td>
-            </tr>
-        </table>
+        <div id="abjadCalc">
+            <table>
+                <tr>
+                    <td></td> <!-- Gap -->
+                    <td id="abjadKeys"><button id="abjad-800" class="abjad-calc-button">ض</button></td>
+                    <td id="abjadKeys"><button id="abjad-500" class="abjad-calc-button">ث</button></td>
+                    <td id="abjadKeys"><button id="abjad-200" class="abjad-calc-button">ر</button></td>
+                    <td id="abjadKeys"><button id="abjad-80" class="abjad-calc-button">ف</button></td>
+                    <td></td> <!-- Gap -->
+                    <td id="abjadKeys"><button id="abjad-50" class="abjad-calc-button">ن</button></td>
+                    <td id="abjadKeys"><button id="abjad-20" class="abjad-calc-button">ك</button></td>
+                    <td id="abjadKeys"><button id="abjad-8" class="abjad-calc-button">ح</button></td>
+                    <td id="abjadKeys"><button id="abjad-5" class="abjad-calc-button">٥</button></td>
+                    <td></td> <!-- Gap -->
+                </tr>
+                <tr>
+                    <td id="abjadKeys"><button id="abjad-1" class="abjad-calc-button">أ</button></td> 
+                    <td id="abjadKeys"><button id="abjad-900" class="abjad-calc-button">ظ</button></td>
+                    <td id="abjadKeys"><button id="abjad-600" class="abjad-calc-button">خ</button></td> 
+                    <td id="abjadKeys"><button id="abjad-300" class="abjad-calc-button">ش</button></td>
+                    <td id="abjadKeys"><button id="abjad-90" class="abjad-calc-button">ص</button></td>
+                    <td></td> <!-- Gap -->
+                    <td id="abjadKeys"><button id="abjad-60" class="abjad-calc-button">س</button></td>
+                    <td id="abjadKeys"><button id="abjad-30" class="abjad-calc-button">ل</button></td>
+                    <td id="abjadKeys"><button id="abjad-9" class="abjad-calc-button">ط</button></td>
+                    <td id="abjadKeys"><button id="abjad-6" class="abjad-calc-button">و</button></td>
+                    <td id="abjadKeys"><button id="abjad-3" class="abjad-calc-button">ج</button></td>
+                </tr>
+                <tr>
+                    <td id="abjadKeys"><button id="abjad-2" class="abjad-calc-button">ب</button></td>
+                    <td id="abjadKeys"><button id="abjad-1000" class="abjad-calc-button">غ</button></td>
+                    <td id="abjadKeys"><button id="abjad-700" class="abjad-calc-button">ذ</button></td>
+                    <td id="abjadKeys"><button id="abjad-400" class="abjad-calc-button">ت</button></td>
+                    <td id="abjadKeys"><button id="abjad-100" class="abjad-calc-button">ق</button></td>
+                    <td></td> <!-- Gap -->
+                    <td id="abjadKeys"><button id="abjad-70" class="abjad-calc-button">ع</button></td>
+                    <td id="abjadKeys"><button id="abjad-40" class="abjad-calc-button">م</button></td>
+                    <td id="abjadKeys"><button id="abjad-10" class="abjad-calc-button">ي</button></td>
+                    <td id="abjadKeys"><button id="abjad-7" class="abjad-calc-button">ز</button></td>
+                    <td id="abjadKeys"><button id="abjad-4" class="abjad-calc-button">د</button></td>
+                </tr>
+            </table>
+        </div>
 
-        <label for="">Abjad Value:</label>
-        <input type="text" id="name" name="name" size="50" />
-        <button>Calculate</button>
-        <button>Clear</button>
-
-        <br><br>
-
-        <!--Numerical Values Table-->
         <h2>Numerical Values</h2>
-        <table>
-            <tr>
-                <td></td> <!-- Gap -->
-                <td>800</td>
-                <td>500</td>
-                <td>200</td>
-                <td>80</td>
-                <td></td> <!-- Gap -->
-                <td>50</td>
-                <td>20</td>
-                <td>8</td>
-                <td>5</td>
-                <td></td> <!-- Gap -->
-            </tr>
-            <tr>
-                <td>1</td> 
-                <td>900</td>
-                <td>600</td> 
-                <td>300</td>
-                <td>90</td>
-                <td></td> <!-- Gap -->
-                <td>60</td>
-                <td>30</td>
-                <td>9</td>
-                <td>6</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <td>2</td> 
-                <td>1000</td>
-                <td>700</td>
-                <td>400</td>
-                <td>100</td>
-                <td></td> <!-- Gap -->
-                <td>70</td>
-                <td>40</td>
-                <td>10</td>
-                <td>7</td>
-                <td>4</td>
-            </tr>
+        <div id="numValues">
+            <table>
+                <tr>
+                    <td></td> <!-- Gap -->
+                    <td id="num-800">800</td>
+                    <td id="num-500">500</td>
+                    <td id="num-200">200</td>
+                    <td id="num-80">80</td>
+                    <td></td> <!-- Gap -->
+                    <td id="num-50">50</td>
+                    <td id="num-20">20</td>
+                    <td id="num-8">8</td>
+                    <td id="num-5">5</td>
+                    <td></td> <!-- Gap -->
+                </tr>
+                <tr>
+                    <td id="num-1">1</td> 
+                    <td id="num-900">900</td>
+                    <td id="num-600">600</td> 
+                    <td id="num-300">300</td>
+                    <td id="num-90">90</td>
+                    <td></td> <!-- Gap -->
+                    <td id="num-60">60</td>
+                    <td id="num-30">30</td>
+                    <td id="num-9">9</td>
+                    <td id="num-6">6</td>
+                    <td id="num-3">3</td>
+                </tr>
+                <tr>
+                    <td id="num-2">2</td> 
+                    <td id="num-1000">1000</td>
+                    <td id="num-700">700</td>
+                    <td id="num-400">400</td>
+                    <td id="num-100">100</td>
+                    <td></td> <!-- Gap -->
+                    <td id="num-70">70</td>
+                    <td id="num-40">40</td>
+                    <td id="num-10">10</td>
+                    <td id="num-7">7</td>
+                    <td id="num-4">4</td>
+                </tr>
+            </table>
+        </div>
 
-
-
-        </table>
+        <!-- Calculate button / textbox -->
+        <div>
+            <label for="abjadValue">Abjad Value:</label>
+            <input type="text" id="abjadValue" name="abjadValue" size="50" />
+            <button type="button" id="calcBtn">Calculate</button>
+            <button type="button" id="clearBtn">Clear</button>
+        </div>
+    </div>
 </body>
 </html>
