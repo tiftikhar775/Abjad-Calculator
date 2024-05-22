@@ -32,12 +32,23 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
-
 // display abjad key values within textbox on click
+function addCharacter(char) {
+    const output = document.getElementById('output');
+    output.value = output.value + char;
+}
 
-// make textbox readonly
+// clear button functionality
+function clearOutput() {
+    const output = document.getElementById('output');
+    output.value = '';
+}
 
+// delete char functionality
+function deleteChar() {
+    const output = document.getElementById('output');
+    output.value = output.value.slice(0, -1);
+}
 
 // calculate button functionality
 
