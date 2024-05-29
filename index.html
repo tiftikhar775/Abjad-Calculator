@@ -12,8 +12,8 @@
 
     <div class="instructions">
         <p>
-            Using the arabic characters below, select any letter or series of letters and then click the calculate
-            button to generate the numerical abjad value for that selection 
+            Click the Arabic letters in the table below followed by the Calculate button and
+            it will produce the ABJAD value of your letter, word, phrase or sentence. 
         </p>
     </div>
 
@@ -23,42 +23,42 @@
             <table>
                 <tr>
                     <td></td> <!-- Gap -->
-                    <td>26</td>
-                    <td>23</td>
-                    <td>20</td>
-                    <td>17</td>
+                    <td id="ord-26">26</td>
+                    <td id="ord-23">23</td>
+                    <td id="ord-20">20</td>
+                    <td id="ord-17">17</td>
                     <td></td> <!-- Gap -->
-                    <td>14</td>
-                    <td>11</td>
-                    <td>8</td>
-                    <td>5</td>
+                    <td id="ord-14">14</td>
+                    <td id="ord-11">11</td>
+                    <td id="ord-8">8</td>
+                    <td id="ord-5">5</td>
                     <td></td> <!-- Gap -->
                 </tr>
                 <tr>
-                    <td>1</td> 
-                    <td>27</td>
-                    <td>24</td> 
-                    <td>21</td>
-                    <td>18</td>
+                    <td id="ord-1">1</td> 
+                    <td id="ord-27">27</td>
+                    <td id="ord-24">24</td> 
+                    <td id="ord-21">21</td>
+                    <td id="ord-18">18</td>
                     <td></td> <!-- Gap -->
-                    <td>15</td>
-                    <td>12</td>
-                    <td>9</td>
-                    <td>6</td>
-                    <td>3</td>
+                    <td id="ord-15">15</td>
+                    <td id="ord-12">12</td>
+                    <td id="ord-9">9</td>
+                    <td id="ord-6">6</td>
+                    <td id="ord-3">3</td>
                 </tr>
                 <tr>
-                    <td>2</td> 
-                    <td>28</td>
-                    <td>25</td>
-                    <td>22</td>
-                    <td>19</td>
+                    <td id="ord-2">2</td> 
+                    <td id="ord-28">28</td>
+                    <td id="ord-25">25</td>
+                    <td id="ord-22">22</td>
+                    <td id="ord-19">19</td>
                     <td></td> <!-- Gap -->
-                    <td>16</td>
-                    <td>13</td>
-                    <td>10</td>
-                    <td>7</td>
-                    <td>4</td>
+                    <td id="ord-16">16</td>
+                    <td id="ord-13">13</td>
+                    <td id="ord-10">10</td>
+                    <td id="ord-7">7</td>
+                    <td id="ord-4">4</td>
                 </tr>
             </table>
         </div>
@@ -68,47 +68,48 @@
             <table>
                 <tr>
                     <td></td> <!-- Gap -->
-                    <td id="abjadKeys"><button onclick="addCharacter('ض')" id="abjad-800" class="abjad-calc-button">ض</button></td>
-                    <td id="abjadKeys"><button onclick="addCharacter('ث')" id="abjad-500" class="abjad-calc-button">ث</button></td>
-                    <td id="abjadKeys"><button onclick="addCharacter('ر')" id="abjad-200" class="abjad-calc-button">ر</button></td>
-                    <td id="abjadKeys"><button onclick="addCharacter('ف')" id="abjad-80" class="abjad-calc-button">ف</button></td>
+                    <td id="abjadKeys"><button onclick="addCharacter('ض')" id="abjad-800" data-ord="ord-26" class="abjad-calc-button">ض</button></td>
+                    <td id="abjadKeys"><button onclick="addCharacter('ث')" id="abjad-500" data-ord="ord-23" class="abjad-calc-button">ث</button></td>
+                    <td id="abjadKeys"><button onclick="addCharacter('ر')" id="abjad-200" data-ord="ord-20" class="abjad-calc-button">ر</button></td>
+                    <td id="abjadKeys"><button onclick="addCharacter('ف')" id="abjad-80" data-ord="ord-17" class="abjad-calc-button">ف</button></td>
                     <td></td> <!-- Gap -->
-                    <td id="abjadKeys"><button onclick="addCharacter('ن')" id="abjad-50" class="abjad-calc-button">ن</button></td>
-                    <td id="abjadKeys"><button onclick="addCharacter('ك')" id="abjad-20" class="abjad-calc-button">ك</button></td>
-                    <td id="abjadKeys"><button onclick="addCharacter('ح')" id="abjad-8" class="abjad-calc-button">ح</button></td>
-                    <td id="abjadKeys"><button onclick="addCharacter('٥')" id="abjad-5" class="abjad-calc-button">٥</button></td>
+                    <td id="abjadKeys"><button onclick="addCharacter('ن')" id="abjad-50" data-ord="ord-14" class="abjad-calc-button">ن</button></td>
+                    <td id="abjadKeys"><button onclick="addCharacter('ك')" id="abjad-20" data-ord="ord-11" class="abjad-calc-button">ك</button></td>
+                    <td id="abjadKeys"><button onclick="addCharacter('ح')" id="abjad-8" data-ord="ord-8" class="abjad-calc-button">ح</button></td>
+                    <td id="abjadKeys"><button onclick="addCharacter('٥')" id="abjad-5" data-ord="ord-5" class="abjad-calc-button">٥</button></td>
                     <td></td> <!-- Gap -->
                 </tr>
                 <tr>
-                    <td id="abjadKeys"><button onclick="addCharacter('أ')" id="abjad-1" class="abjad-calc-button">أ</button></td> 
-                    <td id="abjadKeys"><button onclick="addCharacter('ظ')" id="abjad-900" class="abjad-calc-button">ظ</button></td>
-                    <td id="abjadKeys"><button onclick="addCharacter('خ')" id="abjad-600" class="abjad-calc-button">خ</button></td> 
-                    <td id="abjadKeys"><button onclick="addCharacter('ش')" id="abjad-300" class="abjad-calc-button">ش</button></td>
-                    <td id="abjadKeys"><button onclick="addCharacter('ص')" id="abjad-90" class="abjad-calc-button">ص</button></td>
+                    <td id="abjadKeys"><button onclick="addCharacter('أ')" id="abjad-1" data-ord="ord-1" class="abjad-calc-button">أ</button></td> 
+                    <td id="abjadKeys"><button onclick="addCharacter('ظ')" id="abjad-900" data-ord="ord-27" class="abjad-calc-button">ظ</button></td>
+                    <td id="abjadKeys"><button onclick="addCharacter('خ')" id="abjad-600" data-ord="ord-24" class="abjad-calc-button">خ</button></td> 
+                    <td id="abjadKeys"><button onclick="addCharacter('ش')" id="abjad-300" data-ord="ord-21" class="abjad-calc-button">ش</button></td>
+                    <td id="abjadKeys"><button onclick="addCharacter('ص')" id="abjad-90" data-ord="ord-18" class="abjad-calc-button">ص</button></td>
                     <td></td> <!-- Gap -->
-                    <td id="abjadKeys"><button onclick="addCharacter('س')" id="abjad-60" class="abjad-calc-button">س</button></td>
-                    <td id="abjadKeys"><button onclick="addCharacter('ل')" id="abjad-30" class="abjad-calc-button">ل</button></td>
-                    <td id="abjadKeys"><button onclick="addCharacter('ط')" id="abjad-9" class="abjad-calc-button">ط</button></td>
-                    <td id="abjadKeys"><button onclick="addCharacter('و')" id="abjad-6" class="abjad-calc-button">و</button></td>
-                    <td id="abjadKeys"><button onclick="addCharacter('ج')" id="abjad-3" class="abjad-calc-button">ج</button></td>
+                    <td id="abjadKeys"><button onclick="addCharacter('س')" id="abjad-60" data-ord="ord-15" class="abjad-calc-button">س</button></td>
+                    <td id="abjadKeys"><button onclick="addCharacter('ل')" id="abjad-30" data-ord="ord-12" class="abjad-calc-button">ل</button></td>
+                    <td id="abjadKeys"><button onclick="addCharacter('ط')" id="abjad-9" data-ord="ord-9" class="abjad-calc-button">ط</button></td>
+                    <td id="abjadKeys"><button onclick="addCharacter('و')" id="abjad-6" data-ord="ord-6" class="abjad-calc-button">و</button></td>
+                    <td id="abjadKeys"><button onclick="addCharacter('ج')" id="abjad-3" data-ord="ord-3" class="abjad-calc-button">ج</button></td>
                 </tr>
                 <tr>
-                    <td id="abjadKeys"><button onclick="addCharacter('ب')" id="abjad-2" class="abjad-calc-button">ب</button></td>
-                    <td id="abjadKeys"><button onclick="addCharacter('غ')" id="abjad-1000" class="abjad-calc-button">غ</button></td>
-                    <td id="abjadKeys"><button onclick="addCharacter('ذ')" id="abjad-700" class="abjad-calc-button">ذ</button></td>
-                    <td id="abjadKeys"><button onclick="addCharacter('ت')" id="abjad-400" class="abjad-calc-button">ت</button></td>
-                    <td id="abjadKeys"><button onclick="addCharacter('ق')" id="abjad-100" class="abjad-calc-button">ق</button></td>
+                    <td id="abjadKeys"><button onclick="addCharacter('ب')" id="abjad-2" data-ord="ord-2" class="abjad-calc-button">ب</button></td>
+                    <td id="abjadKeys"><button onclick="addCharacter('غ')" id="abjad-1000" data-ord="ord-28" class="abjad-calc-button">غ</button></td>
+                    <td id="abjadKeys"><button onclick="addCharacter('ذ')" id="abjad-700" data-ord="ord-25" class="abjad-calc-button">ذ</button></td>
+                    <td id="abjadKeys"><button onclick="addCharacter('ت')" id="abjad-400" data-ord="ord-22" class="abjad-calc-button">ت</button></td>
+                    <td id="abjadKeys"><button onclick="addCharacter('ق')" id="abjad-100" data-ord="ord-19" class="abjad-calc-button">ق</button></td>
                     <td></td> <!-- Gap -->
-                    <td id="abjadKeys"><button onclick="addCharacter('ع')" id="abjad-70" class="abjad-calc-button">ع</button></td>
-                    <td id="abjadKeys"><button onclick="addCharacter('م')" id="abjad-40" class="abjad-calc-button">م</button></td>
-                    <td id="abjadKeys"><button onclick="addCharacter('ي')" id="abjad-10" class="abjad-calc-button">ي</button></td>
-                    <td id="abjadKeys"><button onclick="addCharacter('ز')" id="abjad-7" class="abjad-calc-button">ز</button></td>
-                    <td id="abjadKeys"><button onclick="addCharacter('د')" id="abjad-4" class="abjad-calc-button">د</button></td>
+                    <td id="abjadKeys"><button onclick="addCharacter('ع')" id="abjad-70" data-ord="ord-16" class="abjad-calc-button">ع</button></td>
+                    <td id="abjadKeys"><button onclick="addCharacter('م')" id="abjad-40" data-ord="ord-13" class="abjad-calc-button">م</button></td>
+                    <td id="abjadKeys"><button onclick="addCharacter('ي')" id="abjad-10" data-ord="ord-10" class="abjad-calc-button">ي</button></td>
+                    <td id="abjadKeys"><button onclick="addCharacter('ز')" id="abjad-7" data-ord="ord-7" class="abjad-calc-button">ز</button></td>
+                    <td id="abjadKeys"><button onclick="addCharacter('د')" id="abjad-4" data-ord="ord-4" class="abjad-calc-button">د</button></td>
                 </tr>
             </table>
         </div>
 
         <!--numerical values-->
+        <h2>Numerical Values</h2>
         <div id="numValues">
             <table>
                 <tr>
@@ -163,7 +164,7 @@
         
             <br><br>
 
-            <button>Calculate</button>
+            <button onclick="calculate()">Calculate</button>
             <button onclick="deleteChar()">Delete</button>
             <button onclick="clearOutput()">Clear</button>
         </div>

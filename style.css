@@ -44,13 +44,17 @@ td {
     cursor: pointer;
 }
 
-#abjadKeys {
-    padding: 0px;
-}
-
 .abjad-calc-button:hover {
     background-color: lightblue;
     color: blue;
+}
+
+.abjad-calc-button:active {
+    background-color: #067083;
+}
+
+#abjadKeys {
+    padding: 0px;
 }
 
 h2 {
@@ -58,9 +62,14 @@ h2 {
 }
 
 /* Highlighting numerical values */
-.highlight {
+.highlightNum {
     background-color: lightgreen;
     color: darkgreen;
+}
+
+.highlightOrd {
+    background-color: lightcoral;
+    color: darkred;
 }
 
 #calculate {
