@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const inputArea = document.getElementById('output');
     const abjadButtons = document.querySelectorAll('.abjad-calc-button');
 
     abjadButtons.forEach(button => {
@@ -33,18 +34,24 @@ document.addEventListener('DOMContentLoaded', function () {
                 ordCell.classList.remove('highlightOrd');
             }
         });
+
+        // Combine letters with shadda
+        button.addEventListener('click', () => {
+            const char = button.getAttribute('data-char');
+            const currentText = inputArea.value;
+            const lastChar = currentText[currentText.length - 1];
+
+            if (char === 'ّ' && lastChar) {
+                // If shadda is clicked it should combine with last char
+                inputArea.value = currentText.slice(0, -1) + lastChar + 'ّ';
+            } else {
+                inputArea.value += char;
+            }
+        });
     });
 });
 
-// keep keys highlighted when clicked
-
-// display abjad key values within textbox on click
-function addCharacter(char) {
-    const output = document.getElementById('output');
-    output.value = output.value + char;
-}
-
-// clear button functionality
+// Clear button functionality
 function clearOutput() {
     const output = document.getElementById('output');
     const abjadValue = document.getElementById('abjadValue');
@@ -52,50 +59,53 @@ function clearOutput() {
     abjadValue.value = '';
 }
 
-// delete char functionality
+// Delete char functionality
 function deleteChar() {
     const output = document.getElementById('output');
     output.value = output.value.slice(0, -1);
 }
 
-
-// calculate button functionality
+// Calculate button functionality
 // Abjad Formula:   
-// sum of numerical value of all characters + number of unique characters + value of letters with  ّ 
+// sum of numerical value of all characters + number of unique characters + value of letters with ّ
 function calculate() {
     const output = document.getElementById('output').value;
     const abjadValue = document.getElementById('abjadValue');
 
-    // assign values to arabic chars
+    // Assign values to Arabic chars
     const abjadValues = {
-        'أ': 1, 'ب': 2, 'ج': 3, 'د': 4, '٥': 5, 'و': 6, 'ز': 7, 'ح': 8, 'ط': 9, 'ي': 10,
+        'ّ': 0, 'أ': 1, 'ب': 2, 'ج': 3, 'د': 4, 'ه': 5, 'و': 6, 'ز': 7, 'ح': 8, 'ط': 9, 'ي': 10,
         'ك': 20, 'ل': 30, 'م': 40, 'ن': 50, 'س': 60, 'ع': 70, 'ف': 80, 'ص': 90, 'ق': 100,
         'ر': 200, 'ش': 300, 'ت': 400, 'ث': 500, 'خ': 600, 'ذ': 700, 'ض': 800, 'ظ': 900, 'غ': 1000
     };
 
     let sum = 0;
     let uniqueChars = new Set();
+    let shaddaValue = 0;
 
     // Calculate the sum of numerical values of characters
-    for (let char of output) {
-        sum += abjadValues[char] || 0;
-        // count num of unique chars
-        uniqueChars.add(char);
+    for (let i = 0; i < output.length; i++) {
+        let char = output[i];
+        if (char === 'ّ' && i > 0) {
+            let prevChar = output[i - 1];
+            shaddaValue += abjadValues[prevChar];
+            console.log(`Shadda detected. Adding ${abjadValues[prevChar]} for character ${prevChar}`);
+        } else {
+            sum += abjadValues[char] || 0;
+            uniqueChars.add(char);
+            console.log(`Adding ${abjadValues[char] || 0} for character ${char}`);
+        }
     }
 
-    // add total value of unique chars to sum
+    // Add the value of letters with shadda
+    sum += shaddaValue;
+    console.log(`Total shadda value: ${shaddaValue}`);
+
+    // Add total value of unique chars to sum
     sum += uniqueChars.size;
+    console.log(`Unique characters count: ${uniqueChars.size}`);
 
     // Display the result
     abjadValue.value = sum;
+    console.log(`Total Abjad value: ${sum}`);
 }
-
-
-
-
-
-
-
-
-
-
