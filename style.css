@@ -13,11 +13,12 @@ body {
     width: 100%;
     max-width: 600px;
     background: white;
-    padding: 50px;
+    padding: 25px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-left: auto;
     margin-right: auto;
+    font-size: 18px;
 }
 
 table {
@@ -27,14 +28,14 @@ table {
 }
 
 td {
-    border: 1px solid #ddd;
+    border: 0px solid #ddd;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     position: relative;
+    border-radius: 30%;
 }
 
 .abjad-calc-button {
-    font-size: x-large;
     border: none;
     background-color: white;
     width: 100%;
@@ -42,35 +43,72 @@ td {
     font-size: 30px;
     padding: 10px;
     cursor: pointer;
-}
-
-.abjad-calc-button:hover {
-    background-color: lightblue;
-    color: blue;
-}
-
-.abjad-calc-button:active {
-    background-color: #067083;
+    border-radius: 20%;
 }
 
 #abjadKeys {
-    padding: 0px;
+    padding: 5px;
+}
+
+/* sun and moon character styling */
+.sun {
+    color: red;
+}
+
+.moon {
+    color: blue;
+}
+
+.sun:hover {
+    color: orange;
+}
+
+.moon:hover {
+    color: skyblue;
+}
+
+/* Hover colors for sun and moon */
+.sun:hover, .highlight-sun {
+    color: orange;
+}
+
+.moon:hover, .highlight-moon {
+    color: skyblue;
+}
+
+/* Selected highlight colors */
+.highlight-selected-sun {
+    color: red;
+    background-color: lemonchiffon;
+}
+
+.highlight-selected-moon {
+    color: blue;
+    background-color: lightcyan;
 }
 
 h2 {
     margin-top: 0;
 }
 
-/* Highlighting numerical values */
-.highlightNum {
-    background-color: lightgreen;
-    color: darkgreen;
+.highlight {
+    background-color: whitesmoke;
 }
 
-.highlightOrd {
-    background-color: lightcoral;
-    color: darkred;
+/*badge counter*/
+.count-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: darkgoldenrod;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: monospace;
 }
+
 
 .result-container {
     overflow-x: auto;
@@ -102,6 +140,8 @@ input::placeholder {
     height: 30px;
     text-align: center;
     font-size: 20px;
+    background-color: lightgrey;
+    border-color: black;
 }
 
 h2 {
@@ -125,7 +165,5 @@ h2 {
 
 }
 
-#abjadValue {
-    background-color: lightgrey;
-    border-color: black;
-}
+
+
